@@ -6,7 +6,7 @@ pystreamout
 .. image:: https://img.shields.io/pypi/v/pystreamout.svg
         :target: https://pypi.python.org/pypi/pystreamout
 
-.. image:: https://img.shields.io/travis/ackdash/pystreamout.svg
+.. image:: https://api.travis-ci.com/ackdash/pystreamout.svg
         :target: https://travis-ci.com/ackdash/pystreamout
 
 .. image:: https://readthedocs.org/projects/pystreamout/badge/?version=latest
