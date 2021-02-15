@@ -80,6 +80,7 @@ Ready to contribute? Here's how to set up `pystreamout` for local development.
    tests, including testing other Python versions with tox::
 
     $ pip install -r requirements_dev.txt   # install the dev dependencies into the virtualenv
+    $ black tests/ pystreamout/
     $ pylint pystreamout tests
     $ pytest --cov=pystreamout tests/ -s -p no:warnings
     $ tox
