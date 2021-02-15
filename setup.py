@@ -19,7 +19,7 @@ test_requirements = ['pytest>=3', ]
 setup(
     author="Rob Boyle",
     author_email='rdb.code@gmail.com',
-    python_requires='>=3.5',
+    python_requires='>=3.6',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
