@@ -3,6 +3,7 @@ from threading import Event, Thread
 from typing import BinaryIO
 import time
 
+
 class Streamer:
     """
     Streams output from a target process' stream to stdout (non-blocking).
@@ -38,7 +39,7 @@ class Streamer:
         "finished": "Streamer :: done",
         "already_monitoring": "Streamer :: Already monitoring",
         "stream_none": "Streamer :: The given stream to monitor is None",
-        "stop_but_not_monitoring":"Streamer :: stop called but not monitoring"
+        "stop_but_not_monitoring": "Streamer :: stop called but not monitoring",
     }
 
     def __init__(self, *, stream=None, verbose=False):
@@ -74,7 +75,7 @@ class Streamer:
                 buffer_size = 0
                 for line in iter(stream.readline, b""):
                     print(line.decode())
-                    if buffer_size%10 == 0:
+                    if buffer_size % 10 == 0:
                         time.sleep(0)
             except ValueError:
                 self.print(self._messages["streamer_closed_early"])
@@ -86,7 +87,11 @@ class Streamer:
         """
         Check if the Streamer is monitoring or not
         """
-        return self._output_thread and self._output_thread.is_alive() and not self._exit.is_set()
+        return (
+            self._output_thread
+            and self._output_thread.is_alive()
+            and not self._exit.is_set()
+        )
 
     def _cleanup(self):
         """
